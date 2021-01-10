@@ -5,7 +5,7 @@
 #include <EEPROM.h>
 #include "drums.h"
 
-drumLight myDrumLight = {Bass5, 62223, 50, 35, 1};  
+drumLight myDrumLight = {Bass5, 62223, 100, 50, 35, 1};  
 
 void setup()
 {  
@@ -14,6 +14,7 @@ void setup()
   Serial.printf("Drum id before EEPROM read: %d\n", myDrumLight.drumId);
   Serial.printf("Color value before EEPROM read: %d\n", myDrumLight.color);
   Serial.printf("Brightness value before EEPROM read: %i\n", myDrumLight.brightness);
+  Serial.printf("Threshold value before EEPROM read: %i\n", myDrumLight.threshold);
   Serial.printf("Delay time value before EEPROM read: %i\n", myDrumLight.delayValue);
   Serial.printf("Trigger Mode value before EEPROM read: %i\n", myDrumLight.triggerMode);
 
@@ -29,6 +30,7 @@ void setup()
   Serial.printf("Drum id after EEPROM read: %d\n", myDrumLight.drumId);
   Serial.printf("Color value after EEPROM read: %d\n", myDrumLight.color);
   Serial.printf("Brightness value after EEPROM read: %i\n", myDrumLight.brightness);
+  Serial.printf("Threshold value after EEPROM read: %i\n", myDrumLight.threshold);
   Serial.printf("Delay time value after EEPROM read: %i\n", myDrumLight.delayValue);
   Serial.printf("Trigger Mode value after EEPROM read: %i\n", myDrumLight.triggerMode);
 
