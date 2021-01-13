@@ -5,7 +5,7 @@
 #include <EEPROM.h>
 #include "drums.h"
 
-drumLight myDrumLight = {Bass5, 62223, 100, 50, 35, 1};  
+drumLight myDrumLight = {Bass5, 62223, 100, 50, 35, 1, 2};  
 
 void setup()
 {  
@@ -17,6 +17,7 @@ void setup()
   Serial.printf("Threshold value before EEPROM read: %i\n", myDrumLight.threshold);
   Serial.printf("Delay time value before EEPROM read: %i\n", myDrumLight.delayValue);
   Serial.printf("Trigger Mode value before EEPROM read: %i\n", myDrumLight.triggerMode);
+  Serial.printf("Pixel count value before EEPROM read: %i\n", myDrumLight.pixelCount);
 
   char* myDrumLightBytes = reinterpret_cast<char*>(&myDrumLight);
   const uint32_t myDrumLightSize = sizeof(myDrumLight);
@@ -33,6 +34,7 @@ void setup()
   Serial.printf("Threshold value after EEPROM read: %i\n", myDrumLight.threshold);
   Serial.printf("Delay time value after EEPROM read: %i\n", myDrumLight.delayValue);
   Serial.printf("Trigger Mode value after EEPROM read: %i\n", myDrumLight.triggerMode);
+  Serial.printf("Pixel count value after EEPROM read: %i\n", myDrumLight.pixelCount);
 
 }
 
